@@ -1,0 +1,260 @@
+
+.listing-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(15, 25, 19, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.listing-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  width: min(920px, 100%);
+  height: 500px;
+  max-height: calc(100dvh - 48px);
+  overflow: hidden;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+  font-family: "DM Sans", sans-serif;
+}
+
+.listing-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #eae7e2;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  cursor: pointer;
+}
+
+.listing-modal-close:hover {
+  background: #f5f5f5;
+}
+
+.listing-modal-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f4f2ee;
+}
+
+.listing-modal-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.listing-modal-content {
+  display: block;
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 54px 34px 30px;
+}
+
+.listing-modal-category {
+  color: #086322;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.listing-modal-content h2 {
+  margin: 10px 0 16px;
+  font-size: clamp(21px, 2.5vw, 29px);
+  line-height: 1.25;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.listing-modal-price {
+  display: block;
+  margin-bottom: 12px;
+  color: #086322;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.listing-modal-condition,
+.listing-modal-status {
+  display: inline-flex;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #eaf5ec;
+  color: #086322;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.listing-modal-status.lost {
+  background: #fff0ee;
+  color: #b42318;
+}
+
+.listing-modal-meta {
+  margin: 24px 0;
+  padding: 16px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.listing-modal-meta p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 10px 0;
+  color: #666;
+  font-size: 13px;
+}
+
+.listing-modal-meta svg {
+  flex-shrink: 0;
+  color: #086322;
+}
+
+.listing-modal-action {
+  display: block;
+  width: 100%;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #086322;
+  color: white;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.listing-modal-action:hover {
+  background: #00551b;
+}
+
+.listing-modal-note {
+  margin: 12px 0 0;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.product-card-link,
+.lf-item-link {
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+}
+
+.product-grid > .product-card-link,
+.lf-items-grid > .lf-item-link {
+  width: 100%;
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  color: inherit;
+  background: white;
+  border: 1px solid #eae7e2;
+  border-radius: 16px;
+}
+
+.product-grid > .product-card-link:focus-visible,
+.lf-items-grid > .lf-item-link:focus-visible {
+  outline: 2px solid #086322;
+  outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+  .listing-modal-overlay {
+    padding: 12px;
+  }
+
+  .listing-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px minmax(0, 1fr);
+    width: 100%;
+    height: min(620px, calc(100dvh - 24px));
+    max-height: calc(100dvh - 24px);
+  }
+
+  .listing-modal-photo {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .listing-modal-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px 22px 24px;
+  }
+
+  .listing-modal-content h2 {
+    font-size: 23px;
+  }
+
+  .listing-modal-price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .listing-modal {
+    grid-template-rows: 180px minmax(0, 1fr);
+  }
+
+  .listing-modal-content {
+    padding: 22px 18px;
+  }
+}
+
+.listing-modal-description {
+  margin: 0 0 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+.listing-modal-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border: 1px solid #dcd9d3;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.listing-modal-error {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #b91c1c;
+}

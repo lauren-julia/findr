@@ -1,0 +1,372 @@
+.mk-filter-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.mk-empty {
+  padding: 35px 15px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+.mk-filter-row label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mk-filter-row select,
+.mk-filter-row input {
+  height: 36px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  border: 1px solid #e6e3df;
+  border-radius: 8px;
+  background: white;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.mk-filter-row select.mk-filter-category {
+  width: 170px;
+  text-overflow: ellipsis;
+}
+
+.mk-filter-row select.mk-filter-condition {
+  width: 135px;
+  text-overflow: ellipsis;
+}
+
+.mk-filter-row input[type="number"] {
+  width: 88px;
+}
+
+.mk-filter-row select:focus,
+.mk-filter-row input:focus {
+  outline: 2px solid rgba(8, 99, 34, 0.25);
+  border-color: #086322;
+}
+
+.mk-clear-filters {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #e6e3df;
+  border-radius: 8px;
+  background: white;
+  color: #555;
+  font-family: inherit;
+  font-size: 12px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.mk-clear-filters.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.mk-clear-filters:hover {
+  background: #f5f5f5;
+}
+
+.mk-message {
+  padding: 40px 15px;
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+}
+
+.mk-message.error {
+  color: #b42318;
+}
+
+.mk-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #f3f3f3;
+  color: #555;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.mk-badge.available {
+  background: #eaf5ec;
+  color: #086322;
+}
+
+.mk-badge.sold {
+  background: #fff0ee;
+  color: #b42318;
+}
+
+.mk-my-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.mk-my-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #eae7e2;
+  border-radius: 16px;
+  background: white;
+}
+
+.mk-my-card.is-sold .product-image img {
+  filter: grayscale(0.6);
+  opacity: 0.8;
+}
+
+.mk-my-card .product-image .mk-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.mk-mark-sold-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 20px;
+  background: #006b22;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mk-mark-sold-btn:hover:not(:disabled) {
+  background: #00551b;
+}
+
+.mk-mark-sold-btn:disabled {
+  background: rgba(255, 255, 255, 0.94);
+  color: #4b5563;
+  cursor: not-allowed;
+}
+
+.mk-my-card .product-info {
+  flex: 1;
+}
+
+.mk-my-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.mk-my-actions button,
+.mk-my-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border: 1px solid #086322;
+  border-radius: 25px;
+  background: #086322;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mk-my-actions button:hover:not(:disabled) {
+  background: #00551b;
+}
+
+.mk-my-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mk-my-actions a.secondary {
+  background: white;
+  color: #086322;
+}
+
+.mk-pending-chip {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #fff4dd;
+  color: #9a6600;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.mk-photo-hint {
+  margin: 8px 0 0;
+  color: #999;
+  font-size: 11px;
+}
+
+.create-listing-page .publish-listing-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mpr-scope-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #eae7e2;
+  border-radius: 30px;
+  background: white;
+}
+
+.mpr-scope-tabs button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  background: transparent;
+  color: #555;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mpr-scope-tabs button.active {
+  background: #006b22;
+  color: white;
+}
+
+.mpr-section-heading.with-tabs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mpr-form-error {
+  margin: 0 0 14px;
+  color: #b42318;
+  font-size: 12px;
+}
+
+.mpr-view-listing {
+  text-decoration: none;
+}
+
+.mpr-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mk-toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(420px, calc(100vw - 32px));
+  padding: 13px 14px 13px 16px;
+  border: 1px solid #cfe6d4;
+  border-radius: 12px;
+  background: #f0f7f1;
+  color: #086322;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  animation: mk-toast-in 0.2s ease-out;
+}
+
+.mk-toast.error {
+  border-color: #f3c9c4;
+  background: #fff0ee;
+  color: #b42318;
+}
+
+.mk-toast svg {
+  flex-shrink: 0;
+}
+
+.mk-toast span {
+  flex: 1;
+}
+
+.mk-toast button {
+  display: grid;
+  place-items: center;
+  padding: 2px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+@keyframes mk-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1050px) {
+  .mk-my-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .mk-my-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .mk-my-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mk-filter-row input[type="number"] {
+    width: 96px;
+  }
+
+  .mk-toast {
+    right: 16px;
+    left: 16px;
+    bottom: 16px;
+    max-width: none;
+  }
+}
+
+.detail-request:disabled,
+.listing-modal-action:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,215 @@
+
+.detail-page {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 35px 70px;
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #086322;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.detail-photo,
+.detail-info {
+  background: white;
+  border: 1px solid #eae7e2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.detail-photo img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.detail-info {
+  padding: 30px;
+}
+
+.detail-category {
+  color: #086322;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.detail-info h1 {
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.2;
+  margin: 10px 0 18px;
+}
+
+.detail-price {
+  font-size: 27px;
+  color: #086322;
+}
+
+.detail-status {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px 14px;
+  background: #eaf5ec;
+  color: #086322;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.detail-meta {
+  margin: 25px 0;
+  padding: 18px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-meta p {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #666;
+  font-size: 13px;
+}
+
+.detail-request {
+  background: #086322;
+  color: white;
+  border: 0;
+  border-radius: 30px;
+  padding: 13px 24px;
+  font-weight: 700;
+  width: 100%;
+}
+
+.detail-note {
+  color: #888;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.product-card-link,
+.lf-item-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-icon-line {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lf-category-select,
+.tambayan-building-select {
+  font: inherit;
+  border: 1px solid #e6e3df;
+  border-radius: 9px;
+  padding: 9px 12px;
+  background: white;
+  color: #444;
+  font-size: 12px;
+}
+
+.tambayan-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.tambayan-building-select {
+  box-sizing: border-box;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 38px;
+  flex: 0 0 200px;
+}
+
+.demo-requests {
+  margin: 0 auto 22px;
+  max-width: 1200px;
+  padding: 20px;
+  border: 1px solid #eae7e2;
+  background: white;
+  border-radius: 14px;
+}
+
+.demo-requests h3 {
+  margin: 0 0 14px;
+  font-size: 17px;
+}
+
+.demo-request-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+}
+
+.demo-request-row button {
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+.tambayan-placeholder {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: #eaf5ec;
+  color: #086322;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 750px) {
+  .detail-page {
+    padding: 24px 16px 45px;
+  }
+
+  .detail-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .detail-info {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tambayan-filters {
+    justify-content: flex-start;
+  }
+
+  .tambayan-building-select {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 200px;
+  }
+}
